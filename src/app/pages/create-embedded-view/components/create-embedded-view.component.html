@@ -1,0 +1,12 @@
+<p>Classic p element</p>
+<ng-template #helloTemplate>
+    <p>Hello World into ng-template (appended at the end)</p>
+</ng-template>
+<ng-container #ngContainerViewRef>
+    <div>Before injected template</div>
+    <ng-template #helloTemplateInNgContainer>
+        <p>Hello World into ng-container > ng-template</p>
+    </ng-template>
+    <div>Always before injected template</div>
+</ng-container>
+<div>Classic div element</div>

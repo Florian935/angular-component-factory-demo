@@ -7,6 +7,20 @@ const routes: Routes = [
         loadChildren: () =>
             import('./pages/ad/ad.module').then((m) => m.AdModule),
     },
+    {
+        path: 'create-embedded-view',
+        loadChildren: () =>
+            import(
+                './pages/create-embedded-view/create-embedded-view.module'
+            ).then((m) => m.CreateEmbeddedViewModule),
+    },
+    {
+        path: 'create-component',
+        loadChildren: () =>
+            import('./pages/create-component/create-component.module').then(
+                (m) => m.CreateComponentModule
+            ),
+    },
     { path: '', redirectTo: 'ad-banner', pathMatch: 'full' },
     { path: '**', redirectTo: 'ad-banner' },
 ];
